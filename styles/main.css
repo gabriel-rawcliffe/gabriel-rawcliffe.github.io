@@ -55,6 +55,7 @@ ul {
 
 .message {
   font-family: Oxygen;
+  font-weight: 300;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -63,4 +64,19 @@ ul {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  color: #100f0f;
+}
+
+.text-link {
+  font-style: italic;
+  text-decoration: none;
+  color: #100f0f;
+}
+
+.text-link:hover {
+  color: #747171;
+}
+.bold-italic {
+  font-weight: bold;
+  font-style: italic;
 }
