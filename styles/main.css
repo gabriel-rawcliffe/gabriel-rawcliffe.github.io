@@ -1,6 +1,21 @@
 body {
   margin: 0;
 }
+h2 {
+  font-family: kanit;
+}
+p {
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-family: Oxygen;
+  font-weight: 300;
+  color: #100f0f;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
 
 /* Fixed navigation bar */
 
@@ -16,33 +31,35 @@ body {
   margin-top: 0;
   padding-top: 0 !important;
 }
-#home-logo {
-  padding-left: 20px;
-  height: 60px;
-}
-ul {
-  display: flex;
-  list-style-type: none;
-}
 
 .navlist {
   display: flex;
   flex-basis: 100%;
   align-items: center;
   justify-content: flex-end;
-  font-family: Kanit;
-  font-size: 25px;
   flex-direction: row;
+  padding-right: 20px;
 }
 
 .navlink {
   padding: 0px 10px 0px 10px;
   text-decoration: none;
   color: #e0e0e0;
+  font-family: Kanit;
+  font-size: 25px;
 }
 
 .navlink:hover {
   color: #a0a0a0;
+}
+
+.home {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: flex-start;
+  width: 40vw;
+  font-family: Lobster;
+  font-size: 35px;
 }
 
 /* Welcome */
@@ -51,11 +68,10 @@ ul {
   font-family: Kanit;
   justify-content: center;
   display: flex;
+  font-size: 25px;
 }
 
 .message {
-  font-family: Oxygen;
-  font-weight: 300;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +80,11 @@ ul {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: #100f0f;
+  border: none;
+  border-left: 10px solid #abc8be;
+  border-right: 10px solid #abc8be;
+  padding: 10px 30px;
+  margin-bottom: 75px;
 }
 
 .text-link {
@@ -79,4 +99,32 @@ ul {
 .bold-italic {
   font-weight: bold;
   font-style: italic;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  /* background: #7fa097; */
+}
+.intro-block {
+  padding: 20px;
+}
+
+.block {
+  width: 40vw;
+  min-width: 300px;
+  max-width: 600px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  margin-bottom: 19.92;
+  background: #abc8be;
+  font-family: Oxygen;
+  font-size: 20px;
+  border-radius: 50px;
 }
