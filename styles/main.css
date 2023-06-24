@@ -1,6 +1,11 @@
 /* I need to be much more wary of repeating styles that I want to use so I can style parent tags instead of having to repeat styles in class tags */
 body {
   margin: 0;
+  scroll-padding-top: 100px;
+}
+h1 {
+  font-family: Kanit;
+  font-size: 3em;
 }
 
 h2 {
@@ -18,7 +23,9 @@ a {
 }
 ul {
   display: flex;
+  justify-content: center;
   list-style-type: none;
+  padding: 0;
 }
 
 /* Fixed navigation bar */
@@ -30,6 +37,18 @@ ul {
   background-color: #a8534d;
   align-items: center;
   position: fixed;
+  box-shadow: 2px 2px 5px #e0e0e0;
+  opacity: 0.9;
+  margin-top: 0;
+  padding-top: 0 !important;
+}
+.navbar-top {
+  display: flex;
+  width: 100%;
+  height: 75px;
+  background-color: #a8534d;
+  align-items: center;
+
   box-shadow: 2px 2px 5px #e0e0e0;
   opacity: 0.9;
   margin-top: 0;
@@ -73,10 +92,10 @@ ul {
 /* Welcome */
 .welcome {
   padding-top: 80px;
-  font-family: Kanit;
+
   justify-content: center;
   display: flex;
-  font-size: 25px;
+
   text-align: center;
 }
 
@@ -97,8 +116,15 @@ ul {
   display: inline-block;
   white-space: nowrap;
 }
+
+.text {
+  text-decoration: none;
+  color: #100f0f;
+  font-family: Oxygen;
+  font-weight: 300;
+  text-align: center;
+}
 .text-link {
-  font-style: italic;
   text-decoration: none;
   color: #100f0f;
 }
@@ -118,11 +144,12 @@ ul {
   justify-content: space-evenly;
   margin: 0;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   /* background: #7fa097; */
 }
-.intro-block {
+.intro {
   padding: 20px;
+  margin-bottom: 0;
 }
 
 .block {
@@ -132,14 +159,14 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  margin-bottom: 19.92;
+  margin-bottom: 0;
   background: #abc8be;
   font-family: Oxygen;
   font-size: 20px;
   border-radius: 50px;
 }
 
-/* Journey */
+/* Blog links */
 
 .placeholder {
   height: 80px;
@@ -152,3 +179,128 @@ ul {
 .blog-link:hover {
   color: #747171;
 }
+
+.container-vert {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+  min-width: 300px;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: none;
+  justify-content: center;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
+li.bullet {
+  list-style-type: disc;
+}
+
+/* Struggling to change the size of custom svg bullet points */
+
+/* li.tech-bullet {
+  list-style-image: url(../blog/tech.svg);
+  list-style-position: inside;
+  line-height: 1.5;
+} */
+
+/* li.tech-bullet::marker {
+  size: 1em;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  vertical-align: middle; Vertically align the bullet with the text
+} */
+
+.tech-box {
+  background: #e2cd66;
+}
+
+.core-box {
+  background: #a894dd;
+}
+
+.journey-box {
+  background: #edab81;
+}
+
+.invisible {
+  border-width: 0px;
+  position: relative;
+  bottom: 30px;
+}
+
+.heading {
+  padding-top: 60px;
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+.divider {
+  border-width: 2px;
+  border-color: #a8534d;
+  margin-right: 250px;
+  min-width: 625px;
+  margin-left: 5px;
+  position: relative;
+  top: -25px;
+}
+
+.subhead {
+  margin-right: 250px;
+  min-width: 625px;
+  margin-left: 5px;
+}
+
+.demo-text {
+  padding: 10px;
+  padding-left: 0;
+}
+.demo {
+  display: flex;
+  flex-wrap: wrap;
+  border: #abc8be dotted;
+  margin-right: 250px;
+  min-width: 625px;
+  margin-left: 5px;
+}
+/* 
+.IL-demo {
+  height: 300px;
+  width: 300px;
+  min-width: 300px;
+  border-width: 1px;
+  border: #100f0f solid;
+  display: inline-flex;
+}
+
+.big-box {
+  height: 100px;
+  width: 140px;
+  border-width: 1px;
+  border: #100f0f solid;
+  background: #e2cd66;
+  margin: 0;
+}
+
+.medium-box {
+  height: 80px;
+  width: 80px;
+  border-width: 1px;
+  border: #100f0f solid;
+  background: #a894dd;
+  margin: 0;
+}
+
+.small-box {
+  height: 60px;
+  width: 40px;
+  border-width: 1px;
+  border: #100f0f solid;
+  background: #abc8be;
+  margin: 0;
+} */
