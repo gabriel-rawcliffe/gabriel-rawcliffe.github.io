@@ -1,6 +1,8 @@
+/* I need to be much more wary of repeating styles that I want to use so I can style parent tags instead of having to repeat styles in class tags */
 body {
   margin: 0;
 }
+
 h2 {
   font-family: kanit;
 }
@@ -11,7 +13,9 @@ p {
   font-weight: 300;
   color: #100f0f;
 }
-
+a {
+  text-decoration: none;
+}
 ul {
   display: flex;
   list-style-type: none;
@@ -46,7 +50,8 @@ ul {
   text-decoration: none;
   color: #e0e0e0;
   font-family: Kanit;
-  font-size: 25px;
+  font-size: 2.5vw;
+  font-size: min(18px);
 }
 
 .navlink:hover {
@@ -58,8 +63,11 @@ ul {
   flex-basis: 100%;
   justify-content: flex-start;
   width: 40vw;
-  font-family: Lobster;
-  font-size: 35px;
+  width: min(275px);
+  font-family: Kanit;
+  font-size: 3vw;
+  font-size: min(25px);
+  font-weight: bold;
 }
 
 /* Welcome */
@@ -69,12 +77,10 @@ ul {
   justify-content: center;
   display: flex;
   font-size: 25px;
+  text-align: center;
 }
 
 .message {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   max-width: 400px;
   margin-left: auto;
@@ -87,6 +93,10 @@ ul {
   margin-bottom: 75px;
 }
 
+.message a.text-link {
+  display: inline-block;
+  white-space: nowrap;
+}
 .text-link {
   font-style: italic;
   text-decoration: none;
@@ -127,4 +137,18 @@ ul {
   font-family: Oxygen;
   font-size: 20px;
   border-radius: 50px;
+}
+
+/* Journey */
+
+.placeholder {
+  height: 80px;
+}
+
+.blog-link {
+  color: #100f0f;
+}
+
+.blog-link:hover {
+  color: #747171;
 }
