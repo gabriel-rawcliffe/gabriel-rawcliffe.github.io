@@ -396,6 +396,7 @@ h1.navpadding {
   min-width: 150px;
   margin-bottom: 10px;
   background: #abc8be;
+  border-radius: 15px;
 }
 
 .limits-ul {
@@ -411,7 +412,9 @@ h1.navpadding {
   padding: 5px;
   min-width: 150px;
   margin-bottom: 10px;
-  background: #a8534d;
+  background: #bc6761;
+  border-radius: 15px;
+  text-align: center;
 }
 
 .blog-lists {
