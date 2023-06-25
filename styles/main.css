@@ -39,8 +39,8 @@ ul {
   position: fixed;
   box-shadow: 2px 2px 5px #e0e0e0;
   opacity: 0.9;
-  margin-top: 0;
-  padding-top: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .navbar-top {
   display: flex;
@@ -373,4 +373,74 @@ li.bullet {
   margin: 0;
   vertical-align: top;
   border: #747171 dotted;
+}
+div.main:not(.navbar) {
+  margin-left: 2vw;
+  margin-right: 20vw;
+}
+h1.navpadding {
+  padding-top: 80px;
+  margin-top: 0;
+}
+.values-ul {
+  font-family: oxygen;
+  font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.values-ul li {
+  flex-basis: 20%;
+  padding: 5px;
+  min-width: 150px;
+  margin-bottom: 10px;
+  background: #abc8be;
+}
+
+.limits-ul {
+  font-family: oxygen;
+  font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.limits-ul li {
+  flex-basis: 40%;
+  padding: 5px;
+  min-width: 150px;
+  margin-bottom: 10px;
+  background: #a8534d;
+}
+
+.blog-lists {
+  display: block;
+}
+
+.list-boxes {
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+
+.list-boxes ul {
+  display: block;
+  font-family: oxygen;
+  font-weight: 300;
+  padding: 10px;
+  margin: 15px;
+}
+
+.list-boxes li {
+  padding: 15px;
+  margin: 10px;
+}
+
+.LPstrenth-ul li {
+  background: #abc8be;
+  border-radius: 15px;
+}
+.LPlimit-ul li {
+  background: #da825f;
+  border-radius: 15px;
 }
