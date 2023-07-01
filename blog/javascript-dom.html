@@ -40,169 +40,167 @@
           page, altering elements within it, but does not interact directly with
           the CSS file of a page. Instead it can alter the styiling of a page by
           modifying which CSS are applied to what elements of the HTML.
-
-          <!-- Javascript interacts with the HTML file via the DOM (document object model), which is effectively a structure that allocates every aspect of the HTML file a specific "object" representation. So when we use Javascript to refer to an aspect of the HTML, we do so using its object representation.   -->
+          <br />
+          <br />
+          An analogy could be to a car - the HTML would represent the parts and
+          their position, the CSS whether they are fixed or free to move and the
+          color, and styling of those parts, and the JavaScript is how we
+          interface with the car. E.g. what action occurs when we push the
+          accelerator or the break? The light that comes on when we are low on
+          fuel etc
         </p>
       </div>
 
       <div>
-        <h2>What I think my core values are:</h2>
+        <h2>Control flow & loops</h2>
+        <p>
+          Control flow refers to the order in which statements and executed for
+          given code. Typically a computer will read the code systematically,
+          from top to bottom and execute the each section as it reads it.
+          However, various statements in the code will alter the flow of the
+          code is read and what is executed. Imagine the flow of data through
+          the code as water. Usually it flows down hill, simply finding its way
+          to the bottom, unless it encounters some sort of obstacle, this could
+          be a statement of some sort.
+        </p>
+        <p>
+          <strong>Conditional statements:</strong><br />
+          These statements include <em>if</em>,<em>else</em>, and
+          <em>else if</em>, and when the computer incounters one of these
+          statements the flow of the code is altered depending on whether the
+          statement is true of false. In the case of conditional statement ou
+          water has reached a set of doors, leading in different directions.
+          Depending on what has occurred, any of the doors could open, but on
+          any given occassion, only one will open,csending the water in one
+          direction.
+        </p>
+        <p>
+          <strong>Loop statements:</strong><br />
+          These statement allow you to repeat a block of code for a defined set
+          of conditions is met, or for a specific number of times. Loop
+          statements include <em>for</em>, <em>while</em> and
+          <em>do...while</em>. In a <em>for</em> loop, the code repeats for each
+          of the objects in a set, or a specific group of objects from a larger
+          set. If our water meets a loop statement it would be like there are a
+          set of cups it has to fill, before being able to continue downwards
+          through its path
+        </p>
+      </div>
 
+      <div>
+        <h2>The DOM</h2>
+        <p>
+          The Document Object Model (DOM) is a structure where every single
+          element of an HTML file is given a specific
+          <em>object</em> representation, and all those objects are aranged with
+          a specific heirarchy. Javascript interacts with the HTML file via the
+          DOM. When we use Javascript to refer to an aspect of the HTML, we do
+          so using its object representation. The <em>document</em> object is
+          the typical access point to the html elements, and we reference it in
+          JS to access the html elements within
+        </p>
+        <p>
+          We can use JavaScript and the DOM to do almost anything to the way our
+          HTML displays on screen. In the below example the getElementsById()
+          method searches the DOM for the object representation of the HTML
+          element with the ID='myParagraph'. We can then use Javascript to
+          manipulate the HTML, in this case changing the text content, and the
+          background color.
+        </p>
+      </div>
+      <div>
+        <img
+          id="screenshot1"
+          src="html-screenshot.png"
+          alt="a line of html"
+        /><br /><img
+          class="screenshot2"
+          src="javascript-screenshot.png"
+          alt="Basic code of Javascript DOM interaction"
+        />
+      </div>
+      <div>
+        <h2>Data as arrays and objects</h2>
+        <p>
+          <strong>Accessing data from arrays:</strong><br />
+          Arrays are ordered collections of values, where each value is assigned
+          a numeric index starting from 0.<br />
+          To access data from an array, you use square brackets [] with the
+          index value inside to specify the position of the desired element.<br /><br />
+          <img
+            class="screenshot2"
+            src="array-screenshot.png"
+            alt="code showing haw to access datqa from an array"
+          /><br /><br />
+
+          It is simple to loop through data in an array using the
+          <em>for</em> command, or to change data in arrays using:
+          <em>push()</em> which adds new elements to the array;
+          <em>pop()</em> which removes the last elemnt from the array and
+          returns that element; <em>slice(a, b)</em> which extracts a defined
+          portion of the array (from index value 'a', to the index value
+          preceding 'b')and creates a new array, but leaves the original array
+          unalteredl; and <em>splice(x, y)</em> which creates a new array
+          starting with index value 'x', and includes 'y' number of values. The
+          values in the new array are removed from the original array.
+        </p>
+        <p>
+          <strong>Accessing data from objects:</strong><br />
+          Objects are collections of 1 or more values where each value has a
+          unique property name (key).<br />To access data from an object, you
+          use dot notation (object.property) or square brackets [] with the
+          property name inside (object['property']).<br /><br />
+          <img
+            class="screenshot2"
+            src="object-screenshot.png"
+            alt="code showing haw to access data from an object"
+          /><br /><br />
+
+          Looping through objects requires different commands than arrays. One
+          option is a "for...in" loop which will iterate over the object based
+          on the specifics of the command. <em>Object.keys()</em> - returns an
+          array of the property names of an object. <em>Object.values()</em> -
+          returns an array of each of the values of an object.
+          <em>Object.entries()</em> - returns an array of each of the key-value
+          pairs of an object, where each pair is represented as a sub-array.<br /><br />
+          <img
+            class="screenshot2"
+            src="object-looping-sc.png"
+            alt="example of
+          looping through arrays using .dot notation"
+          />
+        </p>
+      </div>
+      <div>
+        <h2>Functions</h2>
+        <p>
+          Functions are blocks of code that can be defined and called to perform
+          a specific task or set of tasks. They are like a set of instructions
+          to perform a specific task that will be performed everytime the name
+          of the instruction manual is referenced.
+        </p>
+        <p><strong>Benifits:</strong></p>
         <ul class="values-ul">
           <li>
-            <strong>Humility:</strong> Not in the sense that I am not confident
-            in myself, but in that I don't believe I have anything inately
-            special, above others. Even if I was given the highest award in the
-            land, I would not feel like that made me inately better than others
-            around me (I hope!)
+            <strong>Reusability:</strong> Allows you to write a piece of code
+            once and reuse it multiple times throughout the program
           </li>
           <li>
-            <strong>Compassion and kindness:</strong> I do my best to help
-            people who are sufferring, and to understand their suffering,
-            whether it be helping a friend with a mental health problem, or
-            helping a stranger in need.
+            <strong>Modularity:</strong> Helps break down complex tasks into
+            smaller, manageable units. This makes things easier to understand
+            and debug
           </li>
           <li>
-            <strong>Open-mindedness:</strong> I am open to others points of
-            view, culture, identity, and ideas. I tend to give peopoe the
-            benefit of the doubt, and give people second chances.
+            <strong>Isolation:</strong> You can define elements within a
+            function such as variables, that only exist in the context of the
+            function, making it easier to isolate things with sections of the
+            code
           </li>
           <li>
-            <strong>Determined:</strong> I stick to a task, sometimes to a
-            fault. I do tend to only work at things I am passionate about
-            though.
+            <strong>Readability:</strong> Can make it easier to follow code with
+            well named and indented functions.
           </li>
         </ul>
-      </div>
-
-      <div>
-        <h2>Ethical decision</h2>
-        <p>
-          <em>The situation:</em><br />
-          A friend who has a severe eating disorder was in a really bad way
-          physically (hadn't eaten to the point where they were struggling to
-          walk around). They assured me they would be ok, and that they would
-          eat soon, and that tehy were not at their worst, and that they were
-          "fine". I had to decide whether I would call emergency services, which
-          in the circumstance would lead to them being comitted to an intitution
-          against their will, for an unknown amount of time. They had already
-          said that they never want to go back to this place, and the situation
-          would completely derail their life (what life they had left). I was
-          also aware that I was one of the only people in their life that they
-          actually trusted, and sending them to hospital would mean they woud
-          lose that. I was fearful they might die.
-        </p>
-
-        <p>
-          <em>Role of values in my decision</em><br />I had to weigh up
-          compassion I had for her mental situation, vs her physical well being.
-          I was open to the idea that I didn't fully understand her situation,
-          both mentally and physically, and I had to use my best judgement to
-          decide someone elses future for them. I ended up not calling emergency
-          services.
-        </p>
-
-        <p>
-          <em>Reflecting on the decision</em><br />I am still uncomfortable with
-          the decision, as I think I allowed my best judgement to be swayed by
-          my compassion for their situation. However, I'm also aware of how
-          important autonomy is to my friend, and the alternative would have
-          removed all autonomy from their life. I don't have the benefit of
-          hindsight on this yet as it's an ongoing situation, and as of writing
-          this I might still call emergency services today. I actually thought
-          writing this might help me process the information and make a decision
-          about how to move forward, but I'm still very much in the same
-          position.
-        </p>
-      </div>
-      <div>
-        <h2>Culture, family, & chosen family</h2>
-
-        <p>
-          I don't have a strong cultural identity within my family, but I think
-          that my open-mindedness and determination began with my upbringing. I
-          don't ever remember my parents being bigotted, and to an extent were
-          exposed to a lot of different people and perspectives. I think my
-          determination comes from sport, and the people I played hockey with
-          growing up, and my mum. But I feel like my identity and values were
-          really honed by the people around me while I was studying my PhD. I
-          was lucky enough to have a cohort of accepting, diverse, passionate,
-          friends from who I learnt a lot about myself and others. So now,
-          despite all of those friends having moved on to other places, I find
-          that the people I surround myself with now refelct the person I am
-          now, and continue to infuence me to grow.
-        </p>
-      </div>
-
-      <div>
-        <h2>Strengths</h2>
-        <ul class="values-ul">
-          <li class="values-li">
-            <strong>Focussed:</strong> I am able to really hone in on tasks and
-            become a little single-minded at times. While this can be
-            detrimental if not adjusted for, it will allow me to dive deep into
-            the material in this course, and commit the time to it that it
-            probably needs
-          </li>
-          <li class="values-li">
-            <strong>Logical:</strong> Through studying, and being a research
-            scientist, I have developed logical thought processes. This will
-            help specifically with coding, as it is a logic based discipline,
-            but I am also able to "logic" myself into having breaks an doing
-            things I like, as I can use evidence about learning etc to show that
-            it will be benificial
-          </li>
-          <li class="values-li">
-            <strong>Research:</strong> I am a very good researcher. I think the
-            one thing a PhD gives you above anything else is the ability to
-            effectively Google stuff. This is going to be very helpful as a lot
-            of the course seems like it will be about finding the right
-            information for a given context
-          </li>
-          <li class="values-li">
-            <strong>Problem solving:</strong> Linked very much to above research
-            and logic sections. I also think I am good a breaking down problems
-            into smaller issues that are simpler to overcome. Coding is all
-            about overcoming problems right?!
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h2>Limitations</h2>
-        <ul class="limits-ul">
-          <li class="limits-li">
-            <strong>Procrastination:</strong> I struggle to get started on tasks
-            that I don't want to do, and to finish tasks that I no longer care
-            about. I'm hoping it wont negatively effect my learning in this
-            course as I have strategies to overcome this known issue, and also I
-            am hoping to be excited and passionate about this new field
-          </li>
-          <li class="Limits-li">
-            <strong>Seeking Help:</strong> Askng for help: I am not the best at
-            asking others for help. If I don't get over this, it will likely
-            make my learning journey much more difficult than it needs to be,
-            both in the course work, as well as personally, as I will likely
-            need extra help in my outside life during the busier parts of the
-            course
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2>Conflict resolution example</h2>
-        <p>
-          I was the coach of a hockey team going to an under 21 national
-          tournament. Some of the guys in the team would at times show up
-          hung-over to trainings, which would affect their performance and the
-          ability of others to get the most out of the training. This was
-          causing tension in the team. So as a group we developed a set of team
-          "ethics" which each of the guys agreed to.
-        </p>
-        <p>
-          The strategy was very effective, I think mostly because it created a
-          sense of mutual buy in from the group. The biggest change I would make
-          would be to do a similar process right from the start of the season!
-        </p>
       </div>
     </div>
   </body>

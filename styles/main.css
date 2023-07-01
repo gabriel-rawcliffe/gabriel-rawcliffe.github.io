@@ -447,3 +447,12 @@ h1.navpadding {
   background: #da825f;
   border-radius: 15px;
 }
+
+#screenshot1 {
+  width: 20vw;
+  min-width: 300px;
+}
+.screenshot2 {
+  width: 40vw;
+  min-width: 300px;
+}
