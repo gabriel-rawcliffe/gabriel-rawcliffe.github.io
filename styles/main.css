@@ -538,7 +538,7 @@ ul.drop {
 .drop li {
   padding: 5px;
   padding-left: 10px;
-  list-style-type: disc;
+  /* list-style-type: disc; */
 }
 /* .drop li::before {
   content: '. ';
