@@ -21,6 +21,7 @@ p {
 a {
   text-decoration: none;
 }
+
 ul {
   display: flex;
   justify-content: center;
@@ -456,3 +457,93 @@ h1.navpadding {
   width: 40vw;
   min-width: 300px;
 }
+
+/* making drop down boxes */
+.dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.dropdown .drop-section {
+  flex-grow: 1;
+  min-width: 400px;
+  /* padding: 10px; */
+  font-family: oxygen;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: left;
+  align-items: start;
+  /* border: #a894dd 1px dotted; */
+  border-radius: 15px;
+
+  margin: 10px;
+}
+
+.dropdown .drop-label {
+  display: flex;
+  align-items: center;
+  border: #a894dd 1px dotted;
+  background: #abc8be;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0;
+}
+.dropdown .drop-label:hover {
+  background: #da825f;
+}
+.dropdown .drop-label::before {
+  content: '+';
+  font-size: 35px;
+  position: relative;
+  right: 5px;
+  top: -2px;
+}
+.drop {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.dropdown .drop-content {
+  display: block;
+  margin: 0;
+  background: #faebea;
+
+  border-radius: 15px;
+  content-visibility: hidden;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.dropdown .drop-section.active .drop-label::before {
+  content: '-';
+  font-size: 35px;
+}
+
+.dropdown .drop-section.active .drop-content {
+  content-visibility: visible;
+}
+
+#whenua {
+  background: #edab81;
+}
+#whenua:hover {
+  background: #da825f;
+}
+
+ul.drop {
+  display: block;
+}
+.drop li {
+  padding: 5px;
+  padding-left: 10px;
+  list-style-type: disc;
+}
+/* .drop li::before {
+  content: '. ';
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  top: -6px;
+} */
