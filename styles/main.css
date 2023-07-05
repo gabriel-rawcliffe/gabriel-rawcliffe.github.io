@@ -11,6 +11,13 @@ h1 {
 h2 {
   font-family: kanit;
 }
+
+h3 {
+  font-family: Oxygen;
+  margin-bottom: 3px;
+  margin-left: 15px;
+}
+
 p {
   padding-bottom: 20px;
   font-size: 20px;
@@ -538,12 +545,64 @@ ul.drop {
 .drop li {
   padding: 5px;
   padding-left: 10px;
-  /* list-style-type: disc; */
 }
-/* .drop li::before {
-  content: '. ';
-  font-size: 50px;
-  font-weight: bold;
-  position: relative;
-  top: -6px;
-} */
+
+.level-bar {
+  border: #100f0f 2px solid;
+  border-radius: 8px;
+  justify-content: space-between;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 70vw;
+  height: 60px;
+}
+.level-bar div {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.level-fill {
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border-radius: 8px;
+  background: #abc8be;
+}
+#pseudocode {
+  width: 85%;
+}
+#trying {
+  width: 65%;
+}
+
+#ducky {
+  width: 80%;
+}
+
+#errors {
+  width: 75%;
+}
+
+#console {
+  width: 50%;
+}
+
+#google {
+  width: 90%;
+}
+
+#peers {
+  width: 50%;
+}
+
+#coaches {
+  width: 50%;
+}
+
+#reflection {
+  width: 70%;
+}
