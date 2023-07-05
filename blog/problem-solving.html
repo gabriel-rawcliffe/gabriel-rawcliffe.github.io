@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,300;0,600;1,100&family=Lobster&family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Javascript & the Dom</title>
+  </head>
+  <!-- Tell your non-tech friend a story about a time you:
+
+  1. were blocked on a simple problem:
+  
+  what was the problem?
+  what problem-solving techniques did you use?
+  how did you feel throughout the process?
+  what did you learn?
+  2. elegantly solved a problem.
+  
+  what was the problem?
+  what problem-solving techniques did you use?
+  how did you feel throughout the process?
+  what did you learn?
+  3. Reflect on how confident you feel using each of these problem-solving techniques/processes:
+  
+  Pseudocode
+  Trying something
+  Rubber ducky method
+  Reading error messages
+  Console.logging
+  Googling
+  Asking your peers for help
+  Asking coaches for help
+  Improving your process with reflection
+  4. Reflect on a time you were reluctant to ask for help. Consider what made you reluctant to do so. What might you try differently next time? -->
+  <body>
+    <div class="navbar">
+      <nav class="navbar">
+        <div>
+          <ul>
+            <li>
+              <a class="home navlink navlist" href="../index.html"
+                >Gabriel's learning blog</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="main">
+      <h1 class="navpadding">Problem Solving</h1>
+      <div>
+        <h2>Tell a story about...</h2>
+        <div class="dropdown">
+          <div class="drop-section">
+            <div id="whenua" class="drop-label">
+              Being stuck on a simple problem
+            </div>
+            <div class="drop-content">
+              <ul class="drop">
+                <li>
+                  I was working on coding challenge that required me basically
+                  add a category called 'win' inside of these different things
+                  called objects. I was pretty excited, because I felt like I
+                  was getting the hang of theis coding thing, and confidently
+                  strode ahead with my code. Unfortunately, when I tested it, it
+                  came back with a big <strong>FAIL</strong>. Luckily i could
+                  look at the test, which was provided by the kind folks at DAA,
+                  and see the part of my code that the test didn't like. This
+                  part of the code was meant to look at my array of objects
+                  (kind of like a list of objects), select a specified object,
+                  and grab out a particular item from within that object. Now
+                  having been doing this Javascript thing for 9 days, I was
+                  shocked!
+                  <em>What? This can't be! I'm certain that is right!</em> I
+                  thought to myself. But alas, no matter how many times I saved
+                  my file and ran the test, I still got the big
+                  <strong>FAIL</strong>.
+                </li>
+                <li>
+                  So first I tried a few things that I was pretty sure wouldn't
+                  work, and they didn't. I talked myself through that part of
+                  the code to make sure the logic worked. By doing this, I had
+                  an incling that the problem probably lay in the way I was
+                  specifically but autaomatically selecting my object as the
+                  code looped though the whole array. But was stuck as to what
+                  to do. I Googled around for an answer, but struggled to find
+                  my specific issue, so eventually I copied my code into ChatGPT
+                  and asked it for help. It quickly pointed out the small error
+                  I had made, and how to easilly solve it.
+                </li>
+                <li>
+                  Throughout I felt a little frustrated, as I was so sure I had
+                  done everything right. And then once I had the solution I was
+                  actually pretty happy, as although it was a simple error, and
+                  a simple fix, I don't think it was something I could have
+                  easily foreseen given my current knowledge.
+                </li>
+                <li>
+                  The process reminded me that I am still learning so much, and
+                  there are so many specific instances that I have not been
+                  exposed to. Also trust error messages, they are not lying.
+                  Specifically, I learned that
+                  <em>
+                    (technical) functions within for loops retain reference to
+                    the variable iterator 'i', but do not capture the value of
+                    'i' at the moment the function is executed. Therefore, if I
+                    want to use [i] to reference a postion in an array I need to
+                    first define a variable = to 'i' outside the function, that
+                    I reference instead of 'i' inside the function.
+                  </em>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <div class="drop-section">
+            <div id="whenua" class="drop-label">
+              An elegant solution
+            </div>
+            <div class="drop-content">
+              <ul class="drop">
+                <li>
+                The problem was that I had make a function (a bit of code that applies a process to a specific input) that would take a sentence, and replace 
+                </li>
+                <li>
+                 
+                </li>
+                <li>
+                 
+                </li>
+                <li>
+                 
+                  </em>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          If HTML defines the main structure of a web-page, and CSS defines its
+          styling, Javascript is responsible for the any actions that take place
+          within a page. That might be bringing up warning messages, changing
+          the way an element looks, responding to text inputs, and many many
+          more things. Javascript interacts directly with the HTML file of a
+          page, altering elements within it, but does not interact directly with
+          the CSS file of a page. Instead it can alter the styiling of a page by
+          modifying which CSS are applied to what elements of the HTML.
+          <br />
+          <br />
+          An analogy could be to a car - the HTML would represent the parts and
+          their position, the CSS whether they are fixed or free to move and the
+          color, and styling of those parts, and the JavaScript is how we
+          interface with the car. E.g. what action occurs when we push the
+          accelerator or the break? The light that comes on when we are low on
+          fuel etc
+        </p>
+      </div>
+
+      <div>
+        <h2>Control flow & loops</h2>
+        <p>
+          Control flow refers to the order in which statements and executed for
+          given code. Typically a computer will read the code systematically,
+          from top to bottom and execute the each section as it reads it.
+          However, various statements in the code will alter the flow of the
+          code is read and what is executed. Imagine the flow of data through
+          the code as water. Usually it flows down hill, simply finding its way
+          to the bottom, unless it encounters some sort of obstacle, this could
+          be a statement of some sort.
+        </p>
+        <p>
+          <strong>Conditional statements:</strong><br />
+          These statements include <em>if</em>,<em>else</em>, and
+          <em>else if</em>, and when the computer incounters one of these
+          statements the flow of the code is altered depending on whether the
+          statement is true of false. In the case of conditional statement ou
+          water has reached a set of doors, leading in different directions.
+          Depending on what has occurred, any of the doors could open, but on
+          any given occassion, only one will open,csending the water in one
+          direction.
+        </p>
+        <p>
+          <strong>Loop statements:</strong><br />
+          These statement allow you to repeat a block of code for a defined set
+          of conditions is met, or for a specific number of times. Loop
+          statements include <em>for</em>, <em>while</em> and
+          <em>do...while</em>. In a <em>for</em> loop, the code repeats for each
+          of the objects in a set, or a specific group of objects from a larger
+          set. If our water meets a loop statement it would be like there are a
+          set of cups it has to fill, before being able to continue downwards
+          through its path
+        </p>
+      </div>
+
+      <div>
+        <h2>The DOM</h2>
+        <p>
+          The Document Object Model (DOM) is a structure where every single
+          element of an HTML file is given a specific
+          <em>object</em> representation, and all those objects are aranged with
+          a specific heirarchy. Javascript interacts with the HTML file via the
+          DOM. When we use Javascript to refer to an aspect of the HTML, we do
+          so using its object representation. The <em>document</em> object is
+          the typical access point to the html elements, and we reference it in
+          JS to access the html elements within
+        </p>
+        <p>
+          We can use JavaScript and the DOM to do almost anything to the way our
+          HTML displays on screen. In the below example the getElementsById()
+          method searches the DOM for the object representation of the HTML
+          element with the ID='myParagraph'. We can then use Javascript to
+          manipulate the HTML, in this case changing the text content, and the
+          background color.
+        </p>
+      </div>
+      <div>
+        <img
+          id="screenshot1"
+          src="html-screenshot.png"
+          alt="a line of html"
+        /><br /><img
+          class="screenshot2"
+          src="javascript-screenshot.png"
+          alt="Basic code of Javascript DOM interaction"
+        />
+      </div>
+      <div>
+        <h2>Data as arrays and objects</h2>
+        <p>
+          <strong>Accessing data from arrays:</strong><br />
+          Arrays are ordered collections of values, where each value is assigned
+          a numeric index starting from 0.<br />
+          To access data from an array, you use square brackets [] with the
+          index value inside to specify the position of the desired element.<br /><br />
+          <img
+            class="screenshot2"
+            src="array-screenshot.png"
+            alt="code showing haw to access datqa from an array"
+          /><br /><br />
+
+          It is simple to loop through data in an array using the
+          <em>for</em> command, or to change data in arrays using:
+          <em>push()</em> which adds new elements to the array;
+          <em>pop()</em> which removes the last elemnt from the array and
+          returns that element; <em>slice(a, b)</em> which extracts a defined
+          portion of the array (from index value 'a', to the index value
+          preceding 'b')and creates a new array, but leaves the original array
+          unalteredl; and <em>splice(x, y)</em> which creates a new array
+          starting with index value 'x', and includes 'y' number of values. The
+          values in the new array are removed from the original array.
+        </p>
+        <p>
+          <strong>Accessing data from objects:</strong><br />
+          Objects are collections of 1 or more values where each value has a
+          unique property name (key).<br />To access data from an object, you
+          use dot notation (object.property) or square brackets [] with the
+          property name inside (object['property']).<br /><br />
+          <img
+            class="screenshot2"
+            src="object-screenshot.png"
+            alt="code showing haw to access data from an object"
+          /><br /><br />
+
+          Looping through objects requires different commands than arrays. One
+          option is a "for...in" loop which will iterate over the object based
+          on the specifics of the command. <em>Object.keys()</em> - returns an
+          array of the property names of an object. <em>Object.values()</em> -
+          returns an array of each of the values of an object.
+          <em>Object.entries()</em> - returns an array of each of the key-value
+          pairs of an object, where each pair is represented as a sub-array.<br /><br />
+          <img
+            class="screenshot2"
+            src="object-looping-sc.png"
+            alt="example of
+          looping through arrays using .dot notation"
+          />
+        </p>
+      </div>
+      <div>
+        <h2>Functions</h2>
+        <p>
+          Functions are blocks of code that can be defined and called to perform
+          a specific task or set of tasks. They are like a set of instructions
+          to perform a specific task that will be performed everytime the name
+          of the instruction manual is referenced.
+        </p>
+        <p><strong>Benifits:</strong></p>
+        <ul class="values-ul">
+          <li>
+            <strong>Reusability:</strong> Allows you to write a piece of code
+            once and reuse it multiple times throughout the program
+          </li>
+          <li>
+            <strong>Modularity:</strong> Helps break down complex tasks into
+            smaller, manageable units. This makes things easier to understand
+            and debug
+          </li>
+          <li>
+            <strong>Isolation:</strong> You can define elements within a
+            function such as variables, that only exist in the context of the
+            function, making it easier to isolate things with sections of the
+            code
+          </li>
+          <li>
+            <strong>Readability:</strong> Can make it easier to follow code with
+            well named and indented functions.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="../index.js" type="text/javascript"></script>
+  </body>
+</html>
