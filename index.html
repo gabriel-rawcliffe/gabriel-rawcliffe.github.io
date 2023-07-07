@@ -15,7 +15,12 @@
     <!--fixed navigation bar-->
     <!-- I need to make this more responsive to size changes, but I think I need some Javascript -->
     <div class="navbar"><nav class="navbar"> 
-      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+      <div class="menu-toggle" onclick="toggleMenu(); menuAnimation()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      
       <div><ul><li><a class="home navlink" href="index.html">Gabriel's learning blog</a></li></ul></div>
       <div class="navlist">
         <ul>

@@ -37,10 +37,11 @@ function toggleMenu() {
 }
 
 //
-// function toggleMenu() {
-//   var menuToggle = document.querySelector('.menu-toggle');
-//   var menu = document.querySelector('.menu');
-
-//   menuToggle.classList.toggle('active');
-//   menu.classList.toggle('active');
-// }
+function menuAnimation() {
+  let bar1 = document.querySelector('.bar1')
+  let bar2 = document.querySelector('.bar2')
+  let bar3 = document.querySelector('.bar3')
+  bar1.classList.toggle('active')
+  bar2.classList.toggle('active')
+  bar3.classList.toggle('active')
+}
