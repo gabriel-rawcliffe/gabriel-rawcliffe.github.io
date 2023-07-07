@@ -6,3 +6,41 @@ for (i = 0; i < dropDownMenu.length; i++) {
     this.classList.toggle('active')
   })
 }
+
+// Scroll bar disappear/reappear
+
+let prevScrollPos = window.scrollY
+let navbar = document.querySelector('.navbar')
+let navListVert = document.querySelector('.navlist-vert')
+
+window.onscroll = function () {
+  let currentScrollPos = window.scrollY
+
+  if (prevScrollPos > currentScrollPos) {
+    navbar.style.transform = 'translateY(0)'
+    navListVert.style.transform = 'translateY(0)'
+  } else {
+    navbar.style.transform = 'translateY(-100%)'
+    navListVert.style.transform = 'translateY(-100%)'
+  }
+
+  prevScrollPos = currentScrollPos
+}
+
+// menu compress
+function toggleMenu() {
+  let menuToggle = document.querySelector('.menu-toggle')
+  let navlistVert = document.querySelector('.navlist-vert')
+
+  menuToggle.classList.toggle('active')
+  navlistVert.classList.toggle('active')
+}
+
+//
+// function toggleMenu() {
+//   var menuToggle = document.querySelector('.menu-toggle');
+//   var menu = document.querySelector('.menu');
+
+//   menuToggle.classList.toggle('active');
+//   menu.classList.toggle('active');
+// }
