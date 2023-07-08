@@ -18,10 +18,14 @@ window.onscroll = function () {
 
   if (prevScrollPos > currentScrollPos) {
     navbar.style.transform = 'translateY(0)'
-    navListVert.style.transform = 'translateY(0)'
+    if (navListVert) {
+      navListVert.style.transform = 'translateY(0)'
+    }
   } else {
     navbar.style.transform = 'translateY(-100%)'
-    navListVert.style.transform = 'translateY(-100%)'
+    if (navListVert) {
+      navListVert.style.transform = 'translateY(-100%)'
+    }
   }
 
   prevScrollPos = currentScrollPos
@@ -36,7 +40,7 @@ function toggleMenu() {
   navlistVert.classList.toggle('active')
 }
 
-//
+//menu annimation
 function menuAnimation() {
   let bar1 = document.querySelector('.bar1')
   let bar2 = document.querySelector('.bar2')
@@ -45,3 +49,20 @@ function menuAnimation() {
   bar2.classList.toggle('active')
   bar3.classList.toggle('active')
 }
+
+// Smoothscroll
+var smoothScrollLinks = document.querySelectorAll('.smooth-scroll')
+
+smoothScrollLinks.forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    var target = document.querySelector(link.getAttribute('href'))
+    var offsetTop = target.offsetTop
+
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth',
+    })
+  })
+})

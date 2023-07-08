@@ -1,4 +1,8 @@
 /* I need to be much more wary of repeating styles that I want to use so I can style parent tags instead of having to repeat styles in class tags */
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   scroll-padding-top: 100px;
@@ -503,6 +507,10 @@ h1.navpadding {
   display: block;
 }
 
+.blog-lists li {
+  font-size: 18px;
+  padding-bottom: 5px;
+}
 .list-boxes {
   display: inline-flex;
   flex-wrap: nowrap;
