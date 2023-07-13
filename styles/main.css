@@ -180,7 +180,7 @@ ul {
 .welcome {
   padding-top: 80px;
 
-  justify-content: center;
+  justify-content: space-around;
   display: flex;
 
   text-align: center;
@@ -228,14 +228,14 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 0;
   margin-top: 40px;
   margin-bottom: 0px;
   /* background: #7fa097; */
 }
 .intro {
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .block {
@@ -245,7 +245,7 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   background: #abc8be;
   font-family: Oxygen;
   font-size: 20px;
